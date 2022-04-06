@@ -1,7 +1,13 @@
 pipeline {
   agent any
-  stages {
-    stage('Build') {
+  
+    stages {
+    stage('Checkout') {
+      steps {
+      git 'https://github.com/Johnjosh11/hello-world-1'
+      }
+    }
+    stage('Clean and build') {
       steps {
       sh 'mvn clean'
       }
