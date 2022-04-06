@@ -1,2 +1,2 @@
-<h1> Hello, Jenkins build was succsessfull, Build manually</h1>
+<h1> Hello, Jenkins build was succsessfull, Build with pipelinejob</h1>
 
