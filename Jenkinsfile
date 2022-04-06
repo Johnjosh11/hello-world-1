@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+        label 'slave1'
+        customWorkspace '/tmp'
+    }
+}
   
     stages {
     stage('Checkout') {
