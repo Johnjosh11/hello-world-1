@@ -1,6 +1,10 @@
 pipeline { 
-    agent any
-
+    agent {
+    node {
+        label 'slave1'
+        customWorkspace '/tmp/folder'
+        }
+    }
     stages {
         stage('Git Checkout') {
             steps {
