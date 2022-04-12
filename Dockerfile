@@ -1,7 +1,6 @@
 # Pull base image 
-From tomcat:8-jre8 
-
-# Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
-CMD service restart apache2
+FROM tomcat:9.0
+RUN rm -rf /usr/local/tomcat/webapps/*
+COPY webapp.war /usr/local/tomcat/webapps
+RUN chmod 777 /usr/local/tomcat/webapps/webapp.war
+CMD ["catalina.sh","run"]
